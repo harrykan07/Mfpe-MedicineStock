@@ -108,6 +108,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>medicine-stock</finalName>
 	</build>
 
 </project>
