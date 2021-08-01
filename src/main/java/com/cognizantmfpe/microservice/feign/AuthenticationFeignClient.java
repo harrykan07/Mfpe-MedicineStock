@@ -7,11 +7,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import com.cognizantmfpe.microservice.model.JwtResponse;
 
 
-<<<<<<< HEAD
 @FeignClient(name = "auth-service", url ="http://3.7.59.200:8083")
-=======
-@FeignClient(name = "auth-service", url ="65.0.119.9:8083")
->>>>>>> 9dae0c9eadb71492dc42ac767f731af76ee283bf
 public interface AuthenticationFeignClient {
 
 
