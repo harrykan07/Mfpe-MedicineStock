@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import com.cognizantmfpe.microservice.model.JwtResponse;
 
 
-@FeignClient(name = "auth-service", url ="http://localhost:8083")
+@FeignClient(name = "auth-service", url ="http://3.7.59.200:8083")
 public interface AuthenticationFeignClient {
 
 
-	@GetMapping(path = "/validate")
+	@GetMapping(path = "/auth/validate")
 	public JwtResponse verifyToken(@RequestHeader(name = "Authorization", required = true) String token);
 
 }

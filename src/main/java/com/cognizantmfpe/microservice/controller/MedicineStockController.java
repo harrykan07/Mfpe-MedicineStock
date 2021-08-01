@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cognizantmfpe.microservice.exception.TokenValidationFailedException;
@@ -28,6 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "*")
 @RestController
 @Slf4j
+@RequestMapping(value="medicine")
 public class MedicineStockController {
 	
 	/** The iservice. */
@@ -54,7 +56,7 @@ public class MedicineStockController {
 	
 	/*
 	 * 2. Get all stocks
-	 * url : http://localhost:8080/MedicineStockInformation
+	 * url : http://localhost:8080/medicine/MedicineStockInformation
 	*/
 	/**
 	 * Gets the all stocks.
@@ -85,7 +87,7 @@ public class MedicineStockController {
 	
 	/*
 	 * 3. Get all stocks by ailment
-	 * url : http://localhost:8080/getByAilment/ortho
+	 * url : http://localhost:8080/medicine/getByAilment/ortho
 	 */
 	/**
 	 * Gets the stocks by ailment.
@@ -123,7 +125,7 @@ public class MedicineStockController {
 	
 	/*
 	 * 4. Get all stocks by medicine
-	 * url : http://localhost:8080/getByMedicine/Orthoherb
+	 * url : http://localhost:8080/medicine/getByMedicine/Orthoherb
 	*/
 	/**
 	 * Gets the stocks by medicine name.
@@ -152,7 +154,7 @@ public class MedicineStockController {
 	}
 	/*
 	 * 5. Update count by medicine
-	 * url : http://localhost:8080//updateCount/
+	 * url : http://localhost:8080/medicine/updateCount/
 	*/
 	
 	@GetMapping("/updateCount/{medicineName}/{count}")

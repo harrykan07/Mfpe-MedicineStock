@@ -25,7 +25,12 @@ security:
   basic:
     enabled:
       true
-
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://65.1.180.5:8761/eureka/
 
 feign:
   compression:
